@@ -10,9 +10,11 @@ This is an example of how to set up a data model using the Software-Driven Resea
 Data models defined in the Markdown format follow these conventions:
 
 - **Modules** are denoted by a heading level 1 ```#```
+- **Packages** are denoted by a heading level 2 ```##```
+- **Enumerations** have to be in a package called ```## Enumerations```
 - **Objects** are started with a heading level 3 ```###``` 
-- Each object contains **fields** in bold as a list &rarr; ```- __name__```
-- **Required fields** are denoted with an asterix &rarr; ```- __name*__```
+- Each object contains **fields** as a list &rarr; ```- name```
+- **Required fields** are made bold &rarr; ```- __name__```
 - Each field has **options** as a list of name to value mapping &rarr; ```- Type: string```
 
 ### ⚙️ Field options
@@ -61,14 +63,11 @@ lib.Root.visualize_tree()
 
 # Enter your data
 dataset = lib.Root(title="Some Title", description="Some Description")
-dataset.add_to_authors(name="Jan Range", affiliation="SimTech")
+dataset.add_to_authors(name="Jan Range", affiliation=lib.Affiliations.STUTTGART.value)
 dataset.add_to_parameters(key="Param", value=10.0)
 
 # Inspect your dataset
 print(dataset.yaml())
-
-# Option: Link your dataset to an option --> Dataverse
-dataset.to_dataverse()
 
 # Option: Export your dataset to another format
 with open("my_dataset.json", "w") as f:
