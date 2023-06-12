@@ -9,10 +9,11 @@ This is an example of how to set up a data model using the Software-Driven Resea
 
 Data models defined in the Markdown format follow these conventions:
 
-- **Modules** are denoted by a heading level 1 ```#```
+- **Title** of the data model is denoted by a heading level 1 ```#```
+- **Modules** are denoted by a heading level 2 ```##```
 - **Objects** are started with a heading level 3 ```###``` 
-- Each object contains **fields** in bold as a list &rarr; ```- __name__```
-- **Required fields** are denoted with an asterix &rarr; ```- __name*__```
+- Each object contains **fields** as a list &rarr; ```- name```
+- **Required fields** are set by making the field bolt &rarr; ```- __name__```
 - Each field has **options** as a list of name to value mapping &rarr; ```- Type: string```
 
 ### ⚙️ Field options
@@ -33,7 +34,7 @@ In the following an [example](https://github.com/JR-1991/sdrdm-template/tree/mai
 
 ### 👁 How can I use it by myself?
 
-You can experiment and use this [example](https://github.com/JR-1991/sdrdm-template/tree/main/specifications) repository right away to get familiar with teh concept. This repository includes an [action](https://github.com/JR-1991/sdrdm-template/blob/main/.github/workflows/generate_api.yaml) that is triggered whenever changes are pushed. Thus, when you introduce changes to the markdown document, these will directly be reflected onto the generated software. Follow these steps to start out:
+You can experiment and use this [example](https://github.com/JR-1991/sdrdm-template/tree/main/specifications) repository right away to get familiar with the concept. This repository includes an [action](https://github.com/JR-1991/sdrdm-template/blob/main/.github/workflows/generate_api.yaml) that is triggered whenever changes are pushed. Thus, when you introduce changes to the markdown document, these will directly be reflected onto the generated software. Follow these steps to start out:
 
 1. Fork this repository into your own profile. This will create an exact copy, but you have all rights to modify it without affecting the original.
 
@@ -57,7 +58,7 @@ lib = DataModel.from_git(
 )
 
 # Visualize the data model
-lib.Root.visualize_tree()
+lib.Root.meta_tree()
 
 # Enter your data
 dataset = lib.Root(title="Some Title", description="Some Description")
