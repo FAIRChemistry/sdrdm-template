@@ -1,5 +1,5 @@
 <h2 align="center">
-  Markdown Example for sdRDM
+  sdRDM Markdown Syntax
 </h2>
 
 <p align="center"> 
