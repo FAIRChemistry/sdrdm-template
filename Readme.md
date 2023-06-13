@@ -1,5 +1,5 @@
 <h2 align="center">
-  sdRDM Markdown Syntax
+  How to define a sdRDM data model
 </h2>
 
 <p align="center"> 
