@@ -93,7 +93,7 @@ This is another object used to describe the parameters of given dataset. As a fi
   - Description: Respective value of a parameter
   - Dataverse: pyDaRUS.Process.method_parameters.value
 - unit
-  - Type: Unit
+  - Type: Units
   - Description: Unit of the parameter
 
 ## Enumerations
@@ -111,4 +111,3 @@ A = "A"
 cd = "cd"
 kg = "kg"
 ```
-
