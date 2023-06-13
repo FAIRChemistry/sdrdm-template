@@ -98,8 +98,6 @@ This is another object used to describe the parameters of given dataset. As a fi
 
 ## Enumerations
 
-Enumerations allow to specify a set of values of a field. As objects, enumerations are speciefied with a level three heading. Additionally, you need to format it as python code as shown below.
-
 ### Units
 
 ```python
